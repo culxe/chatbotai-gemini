@@ -70,6 +70,7 @@ This project is an AI-powered chatbot built using the Gemini API for intelligent
    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 ### Main Project Structures
+```bash
 ├── build # Production build files 
 
 ├── node_modules # Installed dependencies
@@ -89,3 +90,4 @@ This project is an AI-powered chatbot built using the Gemini API for intelligent
 ├── README.md # Documentation for the project
 
 └── tailwind.config.js # TailwindCSS configuration file
+```
