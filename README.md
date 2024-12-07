@@ -46,10 +46,12 @@ This project is an AI-powered chatbot built using the Gemini API for intelligent
 1. To use the Gemini API, you need to set up your API key.
 2. Obtain an API key from the Gemini API website.
 3. Implement to the App.js
-  Import the Gemini AI Model
+
+   Import the Gemini AI Model
    ```bash
    import { GoogleGenerativeAI } from "@google/generative-ai";
    ```
+   Call the Gemini AI model and paste the code
    ```bash
    const { GoogleGenerativeAI } = require("@google/generative-ai");
    const genAI = new GoogleGenerativeAI(process.env.API_KEY);
