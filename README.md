@@ -1,6 +1,8 @@
 # AI Chatbot using Gemini API
 
 This project is an AI-powered chatbot built using the Gemini API for intelligent conversation capabilities. The application is designed to provide an intuitive and interactive user experience with React, TailwindCSS, and Gemini API
+
+(brief chatbot GIF)
 ---
 
 ## Getting Started
@@ -47,7 +49,15 @@ This project is an AI-powered chatbot built using the Gemini API for intelligent
 ### API Key Configuration
 1. To use the Gemini API, you need to set up your API key.
 2. Obtain an API key from the Gemini API website.
-3. Implement to the App.js
+
+   From the Google AI Studio, click "Create API Key" to obtain the API key.
+   ![image](https://github.com/user-attachments/assets/f025ae4d-fe8c-48a6-8c53-d989e8ef2afb)
+
+   Also, we can monitoring usage of the API from Google Cloud website.
+   ![image](https://github.com/user-attachments/assets/db5540e9-89f2-4433-a4f7-9e76c0facb4c)
+
+
+4. Implement to the App.js
 
    Import the Gemini AI Model
    ```bash
