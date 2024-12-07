@@ -1,6 +1,6 @@
 # AI Chatbot using Gemini API
 
-A responsive AI chatbot application built with **React** and styled using **TailwindCSS**, powered by the **Gemini API** for natural language understanding and response generation.
+This project is an AI-powered chatbot built using the Gemini API for intelligent conversation capabilities. The application is designed to provide an intuitive and interactive user experience with React, TailwindCSS, and Gemini API
 ---
 
 ## Getting Started
