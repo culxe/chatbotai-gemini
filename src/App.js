@@ -163,7 +163,7 @@ const App = () => {
       </div>
 
       {/* Tombol New Chat di pojok kanan atas */}
-      <div className="absolute top-4 right-4">
+      <div className="fixed inset-y-4 right-[calc(1rem+16px)]">
         <button onClick={handleNewChat} className="p-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600">
           New
         </button>
