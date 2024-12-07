@@ -21,6 +21,7 @@ A responsive AI chatbot application built with **React** and styled using **Tail
    git clone https://github.com/your-username/ai-chatbot-gemini.git
    cd ai-chatbot-gemini
 2. Install dependencies
+
    Install NPM
    ```bash
    npm install
@@ -54,23 +55,23 @@ A responsive AI chatbot application built with **React** and styled using **Tail
    const genAI = new GoogleGenerativeAI(process.env.API_KEY);
    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-### Project Structures
-├── build
+### Main Project Structures
+├── build # Production build files 
 
-├── node_modules
+├── node_modules # Installed dependencies
 
-├── public
+├── public # Static files and HTML template
 
-├── src
+├── src # Application source code
 
-│   ├── App.js
+│   ├── App.js # Main application component
 
-│   ├── index.css
+│   ├── index.css # Global styles (TailwindCSS)
 
-│   ├── index.js
+│   ├── index.js # Entry point for the app
 
-│   └── package.json
+│   └── package.json # Project metadata and dependencies
 
-├── README.md
+├── README.md # Documentation for the project
 
-└── tailwind.config.js
+└── tailwind.config.js # TailwindCSS configuration file
