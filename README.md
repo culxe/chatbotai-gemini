@@ -35,7 +35,7 @@ A responsive AI chatbot application built with **React** and styled using **Tail
    npx tailwindcss init
    npm install tailwind-scrollbar
    
-4. [Configuration](#API_Key_Configuration) Gemini API 
+4. [Configuration](#API%Key%Configuration) Gemini API 
 5. Start the development server:
    ```bash
    npm start
