@@ -22,6 +22,8 @@ This project is an AI-powered chatbot built using the Gemini API for intelligent
    cd ai-chatbot-gemini
 2. Install dependencies
 
+   Install [Node.js](https://nodejs.org)
+   
    Install NPM
    ```bash
    npm install
