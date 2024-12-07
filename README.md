@@ -2,7 +2,8 @@
 
 This project is an AI-powered chatbot built using the Gemini API for intelligent conversation capabilities. The application is designed to provide an intuitive and interactive user experience with React, TailwindCSS, and Gemini API
 
-(brief chatbot GIF)
+![ChatbotGIF](https://github.com/user-attachments/assets/64750330-509c-4d58-a987-63895075013b)
+
 ---
 
 ## Getting Started
