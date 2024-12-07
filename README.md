@@ -78,11 +78,11 @@ This project is an AI-powered chatbot built using the Gemini API for intelligent
 
 ├── src # Application source code
 
-│   ├── App.js # Main application component
+   │   ├── App.js # Main application component
 
-│   ├── index.css # Global styles (TailwindCSS)
+   │   ├── index.css # Global styles (TailwindCSS)
 
-│   ├── index.js # Entry point for the app
+   │   ├── index.js # Entry point for the app
 
 │   └── package.json # Project metadata and dependencies
 
