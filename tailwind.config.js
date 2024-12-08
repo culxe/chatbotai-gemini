@@ -1,4 +1,3 @@
-// tailwind.config.js
 const plugin = require("tailwind-scrollbar");
 
 module.exports = {
@@ -16,7 +15,6 @@ module.exports = {
     function ({ addComponents }) {
       addComponents({
         ".code-block": {
-          // backgroundColor: "#333333",
           borderRadius: "8px",
           padding: "10px",
           whiteSpace: "pre-wrap",

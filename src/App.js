@@ -1,7 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-// Pastikan API Key sudah ada di .env file
 const genAI = new GoogleGenerativeAI(process.env.REACT_APP_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 const chat = model.startChat({
@@ -18,22 +17,13 @@ const chat = model.startChat({
 });
 
 const formatBotMessage = (message) => {
-  // Mengubah tanda ** menjadi HTML <strong> untuk bold
   let formattedMessage = message.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
-
-  // Mengubah tanda bintang * menjadi <ul><li> untuk bullet points
   formattedMessage = formattedMessage.replace(/^\* (.*?)(?=\n|\r|$)/gm, "<ul><li>$1</li></ul>");
-
-  // Mengubah blok kode dengan tanda ``` menjadi kontainer code-block
   formattedMessage = formattedMessage.replace(
     /```([\s\S]*?)```/g,
     `<div class="code-block bg-gray-800 mt-5 scrollbar-thin scrollbar-thumb-scrollbar-thumb scrollbar-track-scrollbar-track hover:scrollbar-thumb-scrollbar-thumb-hover"><pre><code>$1</code></pre></div>`
   );
-
-  // Mengubah baris baru menjadi <br> untuk line breaks
   formattedMessage = formattedMessage.replace(/\n/g, "<br>");
-
-  // Jika ada dua <br> berturut-turut, gabungkan menjadi satu
   formattedMessage = formattedMessage.replace(/(<br>\s*){2,}/g, "<br>");
 
   return formattedMessage;
@@ -53,20 +43,16 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [hasStarted, setHasStarted] = useState(false);
 
-  // Ref untuk elemen terakhir di daftar pesan
   const messagesEndRef = useRef(null);
 
-  // Fungsi untuk menggulir halaman ke elemen terakhir
   const scrollToBottom = () => {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
-  // Efek untuk menggulir ke bawah setiap kali ada pesan baru
   useEffect(() => {
     scrollToBottom();
-    // Simpan riwayat percakapan ke localStorage setiap kali ada perubahan
     localStorage.setItem("chatHistory", JSON.stringify(messages));
   }, [messages]);
 
@@ -84,12 +70,10 @@ const App = () => {
     }
 
     try {
-      // Mengirim pesan ke Gemini API
       const result = await chat.sendMessage(input);
       const formattedResponse = formatBotMessage(result.response.text());
       const botMessage = { role: "model", content: formattedResponse };
 
-      // Update state dengan pesan baru dari model
       setMessages((prevMessages) => [...prevMessages, botMessage]);
     } catch (error) {
       console.error("Error generating response: ", error);
@@ -106,14 +90,13 @@ const App = () => {
   };
 
   const handleNewChat = () => {
-    // Reset messages dan hapus chat history di localStorage
     setMessages([
       {
         role: "model",
         content: formatBotMessage("So, what would you like to know?"),
       },
     ]);
-    localStorage.removeItem("chatHistory"); // Hapus chat history dari localStorage
+    localStorage.removeItem("chatHistory");
   };
 
   return (
@@ -152,7 +135,7 @@ const App = () => {
               </div>
             )}
 
-            {/* Elemen untuk scroll otomatis */}
+            {/* scroll otomatis */}
             <div ref={messagesEndRef}></div>
           </div>
         </div>
@@ -175,7 +158,7 @@ const App = () => {
         </button>
       </div>
 
-      {/* Tombol New Chat (Hanya muncul di bubble chat) */}
+      {/*New Chat button*/}
       {hasStarted && (
         <div className="fixed top-4 right-4">
           <button onClick={handleNewChat} className="p-2 pb-2.5 pl-2.5 bg-gray-700 text-white rounded-lg hover:bg-gray-600 flex items-center gap-2">
