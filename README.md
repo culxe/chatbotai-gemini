@@ -59,7 +59,7 @@ This project is an AI-powered chatbot built using the Gemini API for intelligent
    ![image](https://github.com/user-attachments/assets/db5540e9-89f2-4433-a4f7-9e76c0facb4c)
 
 
-4. Implement to the App.js
+4. Implement to the app
 
    Import the Gemini AI Model
    ```bash
