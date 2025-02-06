@@ -5,7 +5,7 @@ This project is an AI-powered chatbot built using the Gemini API for intelligent
 <img src="https://github.com/culxe/chatbotai-gemini/blob/main/assets/ChatbotGIF.gif" alt="ChatbotGIF" width="800">
 
 ### Live Demo
-You can view the live demo of this project here: [Live Demo Chatbot](https://your-netlify-link.netlify.app)
+You can view the live demo of this project here: [Live Demo Chatbot](https://culxe-chatbot.netlify.app/)
 
 ---
 
